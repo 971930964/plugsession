@@ -20,18 +20,34 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
 
+.cabecalho__titulo {
+    display: none;
+}
+
 .cabecalho__menu i::before {
     content: url("icones/menu.png");
     font-size: 24px;
 }
 
-.cabecalho__notificacao i::before {
+.carrinho__imagem i::before {
     content: url("icones/carrinho.png");
     font-size: 24px;
 }
 
+.carrinho__imagem2 {
+    display: none;
+}
+
 .cabecalho__logo {
     width: 40px;
+}
+
+.titulo__carrinho {
+    display: none;
+}
+
+.cabecalho__carrinho {
+    display: none;
 }
 
 .menu-lateral {
@@ -115,7 +131,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 3.5em;
+    margin-left: 1em;
     margin-top: 1.5em;
 }
 
@@ -185,17 +201,27 @@ body {
 
 
 .texto__plug {
-    margin: 2em 2em;
-    padding: 1em 1em;
-    background-color: #e9eff6;
-    border: 0px;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 1em;
+    padding: 1em 0;
+    width: 90%;
+}
+
+.texto__plug-imagem {
+    width: 100%;
+    /*background-image: url("img/surf_plug.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
 }
 
 .texto__plug-format {
+    background-color: #FFFFFF;
     font-weight: 400;
     font-size: 18px;
     color: #333333;
+    padding: 1em 1em;
+    
 }
 
 .video__surf {
@@ -217,11 +243,25 @@ body {
     text-align: center;
 }
 
+.rodape__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3em;
+   
+}
+
 .rodape__imagem {
     width: 50px;
-    height: 70px;
-    padding-bottom: 0.5em;
-    padding-top: 1em;
+    height: 65px;
+    padding: 1em 1em;
+
+}
+
+.rodape__imagem2 {
+    width: 70px;
+    height: 40px;
+    padding: 1em 1em;
 }
 
 .rodape__texto {
@@ -259,6 +299,99 @@ body {
         margin: 3em auto;
     }
     
+    }
+
+    @media screen and (min-width: 1024px) {
+        .cabecalho {
+            background-color: #032237;
+            display: flex;
+            justify-content: flex-end;
+            /*column-gap: 32px;
+            grid-template-columns: 1fr auto;
+            grid-column: 2;
+            box-sizing: border-box;
+            padding: 16px 60px;*/
+            height: 80px;
+            padding-right: 2em;
+            box-sizing: border-box;
+        }
+    
+        .cabecalho__menu {
+            display: none;
+        }
+    
+        .cabecalho__logo {
+            display: none;
+        }
+
+
+        .cabecalho__carrinho {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+
+        .carrinho__imagem {
+            display: none;
+        }
+
+        .carrinho__imagem2 {
+            display: block;
+        }
+
+
+        .titulo__carrinho {
+            display: block;
+            padding-left: 1em;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
 
     
+    
+        /*.cabecalho__perfil {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            column-gap: 8px;
+            align-items: center;
+            justify-self: flex-end;
+            color: #95999C;
+            padding: 8px 32px;
+            border-right: 1px solid #95999C;
+        }*/
+    
+
+    }
+
+    @media screen and (min-width: 1024px) {
+        .menu-lateral {
+            position: static;
+            width: 270px;
+            grid-column: 1;
+            grid-row: 1 / span 2;
+        }
+
+        .menu-lateral__link:hover {
+            background-color: #113a56;
+        }
+
+        .texto__plug {
+            flex-direction: row-reverse;
+            margin: 2em auto;
+            width: 60%;
+            
+        }
+
+        .texto__plug-imagem {
+            width: 50%;
+        }
+
+        .texto__plug-format {
+            padding: auto 1em;
+        
+        }
     }
